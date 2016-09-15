@@ -1,0 +1,27 @@
+extends partials/layout.pug
+
+block content
+  .heading
+    h1 Add New Article
+  .order-form
+    form(method='POST')
+      .form-group
+        label(for='title') Title
+        input.form-control#title(type='text' name='title' placeholder='title')
+      .form-group
+        label(for='url') URL
+        input.form-control#url(type='url' name='url' placeholder='url')
+      //- .form-group
+      //-   label(for='size') Size
+      //-   select.form-control#size(name='size')
+      //-     option Select a size:
+      //-     each size in sizes
+      //-       option(value=size.inches) #{size.name}: #{size.inches}"
+      //- .form-group
+      //-   label(for='toppings') Toppings
+      //-   select.form-control#toppings(name='toppings' multiple)
+      //-     each topping in toppings
+      //-       option(value=topping.name)= topping.name
+      .order-form__submit
+        a.btn.btn-danger.btn-lg(href='/') Cancel
+        input.btn.btn-success.btn-lg(type='submit' value='Submit')
