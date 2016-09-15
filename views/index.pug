@@ -2,4 +2,11 @@ extends partials/layout.pug
 
 block content
   .welcome
+    .welcomeText
     h1 Welcome to Reddit Dew
+
+      each score in articles
+        div #{score.score} #{score.title} #{score.url}
+        .order-form__submit
+        a.btn.glyphicon.glyphicon-chevron-up.btn-lg(href='/')
+        a.btn.glyphicon.glyphicon-chevron-down.btn-lg(type='submit' value='Submit')
