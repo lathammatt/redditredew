@@ -9,9 +9,10 @@ const { connect } = require('./database')
 const bodyParser = require("body-parser")
 
 app.set('view engine', 'pug');
-app.use(routes)
-app.use(express.static("public"))
 app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.static("public"))
+/////routes should be last
+app.use(routes)
 
 
 

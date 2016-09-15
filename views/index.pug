@@ -5,12 +5,8 @@ block content
     .welcomeText
     h1 Welcome to Reddit Dew
 
-
-    div this is an article, upvote or downvote
-    //- button.btn.btn-default.btn-sm(type='button' value='Submit')
-    //-   span.glyphicon.glyphicon-chevron-up
-    //- button.btn.btn-default.btn-sm(type='button' value='Submit')
-    //-   span.glyphicon.glyphicon-chevron-down
-    .order-form__submit
-      a.btn.glyphicon.glyphicon-chevron-up.btn-lg(href='/')
-      a.btn.glyphicon.glyphicon-chevron-down.btn-lg(type='submit' value='Submit')
+      each score in articles
+        div #{score.score} #{score.title} #{score.url}
+        .order-form__submit
+        a.btn.glyphicon.glyphicon-chevron-up.btn-lg(href='/')
+        a.btn.glyphicon.glyphicon-chevron-down.btn-lg(type='submit' value='Submit')
