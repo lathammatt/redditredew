@@ -5,8 +5,10 @@ block content
     .welcomeText
     h1 Welcome to Reddit Dew
 
-      each score in articles
-        div #{score.score} #{score.title} #{score.url}
-        .order-form__submit
-        a.btn.glyphicon.glyphicon-chevron-up.btn-lg(href='/')
-        a.btn.glyphicon.glyphicon-chevron-down.btn-lg(type='submit' value='Submit')
+    each score in articles
+      div #{score.title} #{score.url}
+      span(class="score") #{score.score}
+      form(method='POST' action=`/${score.id}/up`)
+        button(type="submit" id=score.title class="btn btn-success votes") +
+      form(method='POST' action=`/${score.id}/down`)
+        button(type="submit" id=score.title class="btn btn-danger votes") -
