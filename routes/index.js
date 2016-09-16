@@ -25,7 +25,7 @@ res.render('index', {page: "index", articles })
 )
 
 router.post('/:id/down', (req, res, next) => {
-  let one = 1;
+
   const postId = req.params.id;
 
   Articles
@@ -35,7 +35,6 @@ router.post('/:id/down', (req, res, next) => {
 })
 
 	router.post('/:id/up', (req, res, next) => {
-		let one = 1;
 		const postId = req.params.id;
 
 		Articles
