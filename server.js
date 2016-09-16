@@ -2,13 +2,13 @@
 
 const express = require('express');
 
-const app = express()
 const port = process.env.PORT || 3000
 const routes = require("./routes/")
 const { connect } = require('./database')
 const bodyParser = require("body-parser")
 const {cyan, red } = require('chalk')
 
+const app = express()
 app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static("public"))
