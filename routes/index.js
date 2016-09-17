@@ -1,6 +1,6 @@
 "use strict";
 
-const { Router } = require("Express");
+const { Router } = require("express");
 const router = Router();
 const Articles = require("../models/articles")
 
