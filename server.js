@@ -4,7 +4,7 @@ const express = require('express');
 
 const port = process.env.PORT || 3000
 const routes = require("./routes/")
-const { connect } = require('./database')
+const { connect } = require('./database/database')
 const bodyParser = require("body-parser")
 const {cyan, red } = require('chalk')
 
