@@ -33,6 +33,11 @@ app.use(({ method, url, headers: { 'user-agent': agent } }, res, next) => {
 app.use(routes)
 ////////////////////////////////////////////////////////////////////////
 
+/////////////////////////////3.5 Custom 404 page can go here/////////////////////
+app.use((req, res) =>
+  res.render('404')
+)
+
 //////////////////////4. Error handling//////////////////////////////////////////////////
 app.use((err, { method, url, headers: { 'user-agent': agent } }, res, next) => {
   if (process.env.NODE_ENV === 'production') {
